@@ -1,12 +1,13 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     mode: "production",
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, './')
+        path: path.resolve(__dirname, 'docs')
     },
     module: {
         // 配置相应的规则
@@ -30,7 +31,18 @@ module.exports = {
             },
         ]
     },
+    resolve: {
+        extensions: ['.js', '.jsx'],
+        alias: {
+            constant: path.resolve(
+                __dirname + '/src/graphy/constant.js',
+            ),
+        },
+    },
     plugins: [
+        new HtmlWebpackPlugin({
+            template: './public/index.html'
+        }),
         new CleanWebpackPlugin()
     ]
 };
