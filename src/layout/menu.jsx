@@ -23,7 +23,7 @@ const useStyle = makeStyles(theme => ({
 const StyledListItem = () => {
     const classes = useStyle()
     return (
-        <Link to="/graphics" className={classes.link}>
+        <Link to="my-project/graphics" className={classes.link}>
             <ListItem className={classes.list_item}>
                 <ListItemText style={{zIndex: 10}}>
                     3D Render

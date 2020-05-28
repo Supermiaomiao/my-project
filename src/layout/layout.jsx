@@ -54,7 +54,7 @@ const Layout = () => {
                 </AppBar>
                 <div style={{height: '92.2vh'}}>
                     <Switch>
-                        <Route path="/graphics" component={Graphics}/>
+                        <Route path="my-project/graphics" component={Graphics}/>
                         <Route path="*" component={Graphics}/>
                     </Switch>
                 </div>
