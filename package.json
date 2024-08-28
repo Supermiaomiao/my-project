@@ -20,7 +20,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "style-loader": "^0.23.1",
-    "webpack": "4.42.0"
+    "webpack": "5.94.0"
   },
   "scripts": {
     "push-prepare": "webpack --config webpack.config.js",
